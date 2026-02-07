@@ -20,17 +20,14 @@
 
         .header {
             background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
-            padding: 2rem 1rem;
+            padding: 1.5rem 1rem;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         .logo-container {
-            max-width: 250px;
-            margin: 0 auto 1rem;
+            max-width: 180px;
+            margin: 0 auto 0.5rem;
         }
 
         .logo-container img {
@@ -40,15 +37,15 @@
 
         h1 {
             color: #00d9ff;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
             text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
         }
 
         .subtitle {
             color: #7ef07e;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
 
         .contact-info {
@@ -61,21 +58,21 @@
 
         .contact-item {
             background: rgba(0, 217, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
             border: 1px solid #00d9ff;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .search-container {
             max-width: 600px;
-            margin: 2rem auto;
+            margin: 1rem auto;
             padding: 0 1rem;
         }
 
         .search-box {
             width: 100%;
-            padding: 1rem;
+            padding: 0.8rem;
             border: 2px solid #00d9ff;
             border-radius: 30px;
             background: rgba(30, 30, 60, 0.8);
@@ -92,7 +89,7 @@
 
         .categories {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 1rem auto;
             padding: 0 1rem;
         }
 
@@ -100,12 +97,12 @@
             display: flex;
             gap: 0.5rem;
             overflow-x: auto;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
         }
 
         .category-tab {
-            padding: 1rem 1.5rem;
+            padding: 0.7rem 1.2rem;
             background: rgba(30, 30, 60, 0.6);
             border: 2px solid #00d9ff;
             border-radius: 10px;
@@ -113,6 +110,7 @@
             white-space: nowrap;
             transition: all 0.3s;
             font-weight: 600;
+            font-size: 0.9rem;
             color: #00d9ff;
         }
 
@@ -252,7 +250,11 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+
+            .logo-container {
+                max-width: 150px;
             }
 
             .category-content.active {
