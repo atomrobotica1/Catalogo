@@ -119,13 +119,20 @@
         .hero::before {
             content: '';
             position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 217, 255, 0.2) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: pulse 4s ease-in-out infinite;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* AQUÍ VA TU BANNER */
+            background-image: url('images/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Oscurece un poco para que el texto se lea bien */
+            filter: brightness(0.4);
+            z-index: -1;
         }
-
+        
         @keyframes pulse {
             0%, 100% { transform: scale(1); opacity: 0.5; }
             50% { transform: scale(1.1); opacity: 0.8; }
