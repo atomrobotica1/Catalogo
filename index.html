@@ -123,16 +123,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* AQUÍ VA TU BANNER */
-            background-image: url('images/banner.jpg');
+            /* TU BANNER AQUÍ - NOTA: usa .jpeg */
+            background-image: url('images/banner.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            /* Oscurece un poco para que el texto se lea bien */
-            filter: brightness(0.4);
+            filter: brightness(0.4);  /* Oscurece para leer el texto */
             z-index: -1;
         }
-        
+                
         @keyframes pulse {
             0%, 100% { transform: scale(1); opacity: 0.5; }
             50% { transform: scale(1.1); opacity: 0.8; }
