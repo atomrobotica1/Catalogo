@@ -712,7 +712,7 @@
                 <button class="btn-primary" onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'})">
                     Ver Catálogo 🚀
                 </button>
-                <button class="btn-secondary" onclick="window.open('https://wa.me/59175037564', '_blank')">
+                <button class="btn-secondary" onclick="window.open('https://wa.me/59177032361', '_blank')">
                     Consultar Precio
                 </button>
             </div>
@@ -762,8 +762,9 @@
             <div class="category-tab" data-category="motores">⚙️ Motores</div>
             <div class="category-tab" data-category="modulos">🔧 Módulos</div>
             <div class="category-tab" data-category="pantallas">📺 Pantallas</div>
-            <div class="category-tab" data-category="componentes">⚡ Componentes</div>
+            <div class="category-tab" data-category="componentes">⚡ Componentes varios</div>
             <div class="category-tab" data-category="kits">🎁 Kits DIY</div>
+            <div class="category-tab" data-category="soldadura">🔧 Soldadura</div>
         </div>
 
         <div class="products-grid" id="productsContainer"></div>
@@ -823,7 +824,7 @@
             {
                 category: 'placas',
                 name: 'Raspberry PI Pico W',
-                price: 160,
+                price: 155,
                 image: 'images/raspberry-pico-w.jpg',
                 badge: 'POPULAR',
                 description: 'Microcontrolador compacto con Wi-Fi integrado.',
@@ -843,8 +844,8 @@
                 name: 'ESP32 38 pines',
                 price: 90,
                 image: 'images/esp32-38.jpg',
-                description: 'Módulo ESP32 con más pines para proyectos IoT.',
-                specs: ['Doble núcleo 240 MHz', 'USB tipo C', '38 pines', 'Ideal para IoT']
+                description: 'Módulo microcontrolador potente con Wi-Fi y Bluetooth.',
+                specs: ['Doble núcleo 240 MHz', 'USB tipo C', '30 pines', 'Wi-Fi + Bluetooth']
             },
             {
                 category: 'placas',
@@ -861,7 +862,15 @@
                 price: 55,
                 image: 'images/arduino-nano.jpg',
                 description: 'Versión compacta del Arduino para prototipos.',
-                specs: ['ATmega328P 16 MHz', 'Compacto', 'USB CH340', 'Cable tipo C']
+                specs: ['ATmega328P 16 MHz', 'Pines soldados y sin soldar', 'USB CH340', 'Cable tipo C']
+            },
+            {
+                category: 'placas',
+                name: 'PIC16877A',
+                price: 75,
+                image: 'images/arduino-nano.jpg',
+                description: 'Microcontrolador PIC16F877A DIP40 original.',
+                specs: ['Voltaje de operación:  4V a 5.5V', 'Numero de I/O: 33', 'RAM: 368 Bytes', 'Comparadores: 2 ADC 8 ch, 10-bit']
             },
             
             // SENSORES
