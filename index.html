@@ -345,22 +345,44 @@
             padding-bottom: 1rem;
             scrollbar-width: thin;
             scrollbar-color: #00d9ff #16213e;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
         }
-
+        
+        .category-tabs::after {
+            content: '→';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(90deg, transparent, #0a0e27);
+            padding: 1rem 2rem;
+            color: #00d9ff;
+            font-size: 1.5rem;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        
+        @media (min-width: 1200px) {
+            .category-tabs::after {
+                display: none;
+            }
+        }
+        
         .category-tabs::-webkit-scrollbar {
             height: 8px;
         }
-
+        
         .category-tabs::-webkit-scrollbar-track {
             background: #16213e;
             border-radius: 10px;
         }
-
+        
         .category-tabs::-webkit-scrollbar-thumb {
             background: #00d9ff;
             border-radius: 10px;
         }
-
+        
         .category-tab {
             padding: 1rem 2rem;
             background: rgba(30, 30, 60, 0.6);
@@ -374,8 +396,10 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            min-width: fit-content;
+            flex-shrink: 0;
         }
-
+        
         .category-tab::before {
             content: '';
             position: absolute;
@@ -386,17 +410,17 @@
             background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.3), transparent);
             transition: left 0.5s;
         }
-
+        
         .category-tab:hover::before {
             left: 100%;
         }
-
+        
         .category-tab:hover {
             border-color: #00d9ff;
             transform: translateY(-3px);
             box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
         }
-
+        
         .category-tab.active {
             background: linear-gradient(135deg, #00d9ff 0%, #7ef07e 100%);
             color: #0a0e27;
@@ -404,15 +428,15 @@
             box-shadow: 0 5px 25px rgba(0, 217, 255, 0.5);
             transform: translateY(-3px);
         }
-
-        /* PRODUCTS GRID */
+        
+/* PRODUCTS GRID */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
             animation: fadeIn 0.6s ease-out;
         }
-
+        
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -783,7 +807,7 @@
         <h2 class="section-title">⚡ Nuestro Catálogo</h2>
         
         <div class="category-tabs" id="categoryTabs">
-            <div class="category-tab active" data-category="all">🌟 odos</div>
+            <div class="category-tab active" data-category="all">🌟Todos</div>
             <div class="category-tab" data-category="placas">🔌Placas de Desarrollo</div>
             <div class="category-tab" data-category="sensores">📡Sensores</div>
             <div class="category-tab" data-category="motores">⚙️Motores</div>
