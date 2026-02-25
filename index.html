@@ -196,122 +196,120 @@
         }
         
         @media (max-width: 768px) {
-            .navbar {
-                padding: 1rem;
-            }
-            
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .brand {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .search-navbar {
-                width: 100%;
-                max-width: 100%;
-                order: 3;
-            }
-            
-            .nav-contact {
-                width: 100%;
-                justify-content: center;
-                order: 2;
-            }
-            
-            .contact-number {
-                font-size: 0.9rem;
-            }
-            .search-section {
-                display: none !important;
-            }
-            .search-icon {
-                display: none !important;
-            }
-                    /* Hero más compacto */
-            .hero {
-                min-height: auto !important;
-                padding: 1.5rem 1rem !important;
-                margin-bottom: 0.5rem !important;
-            }
-            
-            .hero h1 {
-                font-size: 2rem !important;
-                margin-bottom: 0.8rem !important;
-            }
-            
-            .hero p {
-                font-size: 1rem !important;
-                margin-bottom: 0.8rem !important;
-            }
-            
-            .hero-badges {
-                gap: 0.5rem !important;
-                margin-bottom: 0.8rem !important;
-            }
-            
-            .badge {
-                padding: 0.4rem 0.8rem !important;
-                font-size: 0.85rem !important;
-            }
-            
-            .cta-buttons {
-                gap: 0.8rem !important;
-                margin-top: 0.8rem !important;
-            }
-            
-            .cta-btn {
-                padding: 0.8rem 1.5rem !important;
-                font-size: 0.95rem !important;
-            }
-            
-            /* Features banner más compacto */
-            .features-banner {
-                padding: 1rem 0.5rem !important;
-                margin-bottom: 0.5rem !important;
-            }
-            
-            .feature-item {
-                gap: 0.3rem !important;
-            }
-            
-            .feature-item span:first-child {
-                font-size: 1.5rem !important;
-            }
-            
-            .feature-text h4 {
-                font-size: 0.85rem !important;
-                margin-bottom: 0.1rem !important;
-            }
-            
-            .feature-text p {
-                font-size: 0.75rem !important;
-            }
-            
-            /* Catálogo pegado arriba */
-            .category-tabs {
-                margin-top: 0.5rem !important;
-                padding: 0.8rem 0.5rem !important;
-            }
-            
-            .category-tab {
-                padding: 0.6rem 1.2rem !important;
-                font-size: 0.9rem !important;
-            }
-            
-            /* Grid de productos más pegado */
-            .products-section {
-                padding: 1rem 0.5rem !important;
-            }
-            
-            .products-grid {
-                gap: 1rem !important;
-                margin-top: 0.5rem !important;
-            }
+        /* NAVBAR */
+        .navbar {
+            padding: 1rem;
+            flex-direction: column;
+            gap: 1rem;
         }
+        .nav-container {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .brand {
+            width: 100%;
+            justify-content: center;
+        }
+        .search-navbar {
+            width: 100%;
+            max-width: 100%;
+            order: 3;
+        }
+        .nav-contact {
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.8rem;
+            order: 2;
+        }
+        .contact-number {
+            font-size: 0.9rem;
+        }
+    
+        /* HERO */
+        .hero {
+            min-height: auto !important;
+            padding: 1.5rem 1rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .hero h1 {
+            font-size: 2rem !important;
+            margin-bottom: 0.8rem !important;
+        }
+        .hero p {
+            font-size: 1rem !important;
+            margin-bottom: 0.8rem !important;
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+        .hero-badges {
+            gap: 0.5rem !important;
+            margin-bottom: 0.8rem !important;
+        }
+        .hero-buttons {
+            flex-direction: column;
+            gap: 0.8rem !important;
+            margin-top: 0.8rem !important;
+        }
+        .badge {
+            padding: 0.4rem 0.8rem !important;
+            font-size: 0.85rem !important;
+        }
+        .cta-btn {
+            padding: 0.8rem 1.5rem !important;
+            font-size: 0.95rem !important;
+        }
+    
+        /* FEATURES BANNER */
+        .features-banner {
+            flex-direction: column;
+            padding: 1rem 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .feature-item {
+            gap: 0.3rem !important;
+        }
+        .feature-item span:first-child {
+            font-size: 1.5rem !important;
+        }
+        .feature-text h4 {
+            font-size: 0.85rem !important;
+            margin-bottom: 0.1rem !important;
+        }
+        .feature-text p {
+            font-size: 0.75rem !important;
+        }
+    
+        /* CATEGORÍAS */
+        .category-tabs {
+            margin-top: 0.5rem !important;
+            padding: 0.8rem 0.5rem !important;
+        }
+        .category-tab {
+            padding: 0.6rem 1.2rem !important;
+            font-size: 0.9rem !important;
+        }
+    
+        /* PRODUCTOS */
+        .products-section {
+            padding: 1rem 0.5rem !important;
+        }
+        .products-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem !important;
+            margin-top: 0.5rem !important;
+        }
+    
+        /* WHATSAPP */
+        .whatsapp-float {
+            width: 60px;
+            height: 60px;
+            font-size: 2rem;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
         
         @media (max-width: 480px) {
             .brand-text {
@@ -945,47 +943,6 @@
             color: #7ef07e;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .navbar {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
-            }
-
-            .nav-contact {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .features-banner {
-                flex-direction: column;
-            }
-
-            .whatsapp-float {
-                width: 60px;
-                height: 60px;
-                font-size: 2rem;
-                bottom: 20px;
-                right: 20px;
-            }
-        }
     </style>
 </head>
 <body>
