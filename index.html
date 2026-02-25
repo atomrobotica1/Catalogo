@@ -1008,9 +1008,6 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">🎉 Envíos a toda Bolivia</div>
-            <div class="hero-badge">🎉 Servicio de Impresión 3D</div>
-            <div class="hero-badge">🎉 Componentes con la mejor calidad</div>
             <h1>ATOM Electrónica & Robótica</h1>
             <p class="hero-subtitle">
                 Somos una tienda de componentes para tus proyectos de <strong>robótica, IoT y electrónica</strong>.
@@ -1040,14 +1037,14 @@
             <div>A toda Bolivia</div>
         </div>
         <div class="feature-item">
-            <div class="feature-icon">✅</div>
-            <div class="feature-title">Garantía</div>
-            <div>Productos con la mejor calidad</div>
+            <div class="feature-icon">🖨️</div>
+            <div class="feature-title">Impresión 3D</div>
+            <div>Diseñamos e imprimimos</div>
         </div>
         <div class="feature-item">
             <div class="feature-icon">💰</div>
             <div class="feature-title">Mejores Precios</div>
-            <div>Competitivos</div>
+            <div>Y con la mejor calidad</div>
         </div>
         <div class="feature-item">
             <div class="feature-icon">🎓</div>
@@ -2770,6 +2767,13 @@
                     searchBoxNav.value = '';
                     searchTerm = '';
                     renderProducts();
+                }
+            });
+
+            searchBoxNav.addEventListener('focus', () => {
+                const catalogSection = document.querySelector('.category-tabs');
+                if (catalogSection && window.scrollY < catalogSection.offsetTop - 100) {
+                    catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         }
