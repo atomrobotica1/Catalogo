@@ -2636,7 +2636,7 @@
 
         let currentCategory = 'all';
         let searchTerm = '';
-
+        
         // Cargar logo
         const logoImg = document.getElementById('logoImg');
         
@@ -2652,12 +2652,12 @@
                 
                 return matchCategory && matchSearch;
             });
-
+            
             if (filteredProducts.length === 0) {
                 container.innerHTML = '<div class="no-results">😔 No se encontraron productos<br>Intenta con otra búsqueda</div>';
                 return;
             }
-
+            
             container.innerHTML = filteredProducts.map(product => `
                 <div class="product-card">
                     ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
@@ -2679,8 +2679,8 @@
                 </div>
             `).join('');
         }
-
-        // Event listeners
+        
+        // Event listeners para categorías
         document.querySelectorAll('.category-tab').forEach(tab => {
             tab.addEventListener('click', () => {
                 document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
@@ -2689,12 +2689,33 @@
                 renderProducts();
             });
         });
-
-        document.getElementById('searchBox').addEventListener('input', (e) => {
-            searchTerm = e.target.value;
-            renderProducts();
-        });
-
+        
+        // Event listener SOLO para buscador del NAVBAR
+        const searchBoxNav = document.getElementById('searchBoxNav');
+        if (searchBoxNav) {
+            searchBoxNav.addEventListener('input', (e) => {
+                searchTerm = e.target.value;
+                renderProducts();
+            });
+            
+            // Limpiar búsqueda al presionar ESC
+            searchBoxNav.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    searchBoxNav.value = '';
+                    searchTerm = '';
+                    renderProducts();
+                }
+            });
+            
+            // Scroll automático al catálogo cuando buscas
+            searchBoxNav.addEventListener('focus', () => {
+                const catalogSection = document.querySelector('.category-tabs');
+                if (catalogSection && window.scrollY < catalogSection.offsetTop - 100) {
+                    catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
+        
         // Render inicial
         renderProducts();
     </script>
