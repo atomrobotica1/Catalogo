@@ -2752,14 +2752,6 @@
                     renderProducts();
                 }
             });
-            
-            // Scroll automático al catálogo cuando buscas
-            searchBoxNav.addEventListener('focus', () => {
-                const catalogSection = document.querySelector('.category-tabs');
-                if (catalogSection && window.scrollY < catalogSection.offsetTop - 100) {
-                    catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
         }
         
         // Render inicial
