@@ -200,17 +200,19 @@
         @media (max-width: 768px) {
         /* NAVBAR */
         .navbar {
-            padding: 1rem;
-            flex-direction: column;
-            gap: 1rem;
+            padding: 0.5rem 1rem;
         }
         .nav-container {
-            flex-direction: column;
-            gap: 1rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
         .brand {
             width: 100%;
             justify-content: center;
+        }
+        .brand-text {
+            font-size: 1rem;
         }
         .search-navbar {
             width: 100%;
@@ -221,14 +223,21 @@
         .nav-contact {
             width: 100%;
             justify-content: center;
-            flex-direction: column;
+            flex-direction: row;
             gap: 0.8rem;
             order: 2;
         }
         .contact-number {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
-    
+        .social-icon {
+            width: 32px;
+            height: 32px;
+        }
+        .social-icon svg {
+            width: 16px;
+            height: 16px;
+        }
         /* HERO */
         .hero {
             min-height: auto !important;
