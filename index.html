@@ -2710,6 +2710,12 @@
         
         // Cargar logo
         const logoImg = document.getElementById('logoImg');
+
+        function normalizar(texto) {
+            return texto.toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+        }
         
         function renderProducts() {
             const container = document.getElementById('productsContainer');
@@ -2717,9 +2723,9 @@
             let filteredProducts = products.filter(product => {
                 const matchCategory = currentCategory === 'all' || product.category === currentCategory;
                 const matchSearch = searchTerm === '' || 
-                    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    product.specs.some(spec => spec.toLowerCase().includes(searchTerm.toLowerCase()));
+                    normalizar(product.name).includes(normalizar(searchTerm)) ||
+                    normalizar(product.description).includes(normalizar(searchTerm)) ||
+                    product.specs.some(spec => normalizar(spec).includes(normalizar(searchTerm)));
                 
                 return matchCategory && matchSearch;
             });
@@ -2769,15 +2775,19 @@
                 renderProducts();
             });
             
-            // Limpiar búsqueda al presionar ESC
             searchBoxNav.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     searchBoxNav.value = '';
                     searchTerm = '';
                     renderProducts();
                 }
+                if (e.key === 'Enter') {
+                    const catalogSection = document.querySelector('.category-tabs');
+                    if (catalogSection) {
+                        catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
             });
-
             searchBoxNav.addEventListener('focus', () => {
                 const catalogSection = document.querySelector('.category-tabs');
                 if (catalogSection && window.scrollY < catalogSection.offsetTop - 100) {
@@ -2788,6 +2798,7 @@
         
         // Render inicial
         renderProducts();
+        
     </script>
 </body>
 </html>
