@@ -2750,9 +2750,6 @@
                     <ul class="product-specs">
                         ${product.specs.map(spec => `<li>${spec}</li>`).join('')}
                     </ul>
-                    <button class="add-to-cart-btn" onclick="window.open('https://wa.me/59175037564?text=Hola!%20Me%20interesa:%20${encodeURIComponent(product.name)}%20-%20${product.price}%20Bs', '_blank')">
-                        💬 Consultar Precio
-                    </button>
                 </div>
             `).join('');
         }
@@ -2782,9 +2779,15 @@
                     renderProducts();
                 }
                 if (e.key === 'Enter') {
-                    const catalogSection = document.querySelector('.category-tabs');
-                    if (catalogSection) {
-                        catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    searchBoxNav.blur(); // ← cierra el teclado
+                    const primerProducto = document.querySelector('.product-card');
+                    if (primerProducto) {
+                        primerProducto.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        const catalogSection = document.querySelector('.category-tabs');
+                        if (catalogSection) {
+                            catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
                     }
                 }
             });
